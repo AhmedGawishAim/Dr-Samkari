@@ -14,7 +14,7 @@ import Image from "next/image";
 export default function Page() {
   const [isLoading, setIsLoading] = useState(false);
 
-  // loading page func
+  // loading page func.
   useEffect(() => {
     // Disable scrolling during load
     document.body.classList.add("overflow-hidden");
@@ -51,12 +51,12 @@ export default function Page() {
 
   return (
     <div className="animate-fadeIn">
-      {/* <Hero /> */}
-      {/* <Book /> */}
-      {/* <TrackBookSection /> */}
-      {/* <NotifiedSection /> */}
-      {/* <PointsSection /> */}
-      {/* <LatestNewsSection /> */}
+      <Hero />
+      <Book />
+      <TrackBookSection />
+      <NotifiedSection />
+      <PointsSection />
+      <LatestNewsSection />
 
 
     </div>

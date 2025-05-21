@@ -12,7 +12,7 @@ import LatestNewsSection from "../components/LatestNewsSection";
 import Img8 from "@/public/assets/img-loading.png";
 import Image from "next/image";
 export default function Page() {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   // loading page func.
   useEffect(() => {

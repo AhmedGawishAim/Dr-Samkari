@@ -27,7 +27,7 @@ function Page() {
                     initial={{ opacity: 0, y: 0 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1.2, delay: 0.8 }}
-                    className="about-overlay-img absolute top-[48px] inset-0 bg-[red] rounded-[10px] z-[-2]" >
+                    className="about-overlay-img absolute top-[48px] inset-0  rounded-[10px] z-[-2]" >
 
                   </motion.div>
 

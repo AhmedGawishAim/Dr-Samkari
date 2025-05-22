@@ -11,6 +11,7 @@ import { motion, useInView, useAnimation } from "framer-motion";
 export default function ContactPage() {
   const LocationData = [
     {
+      numberClinic:1,
       title: "Klinik Center مركز كلينك الطبي",
       address1: "Kuwait City, Salmiya, Alkhansaa' St. Block 5",
       address2: "مدينة الكويت، السالمية، شارع الخنساء، بلوك 5",
@@ -23,6 +24,7 @@ export default function ContactPage() {
       tel: "tel:+96522020404",
     },
     {
+      numberClinic:2,
       title: "Dr. Samkari Clinic عيادة د. سمكري",
       address1: "Shatt Al-Arab St. Amman 11831",
       address2: "عمان - أم أذينة - ش. شط العرب",
@@ -54,7 +56,7 @@ export default function ContactPage() {
 
   // Func to display location section
   const renderLocationClinic = (location, alignEnd = false) => (
-    <div className={` px-2 text-end  md:text-${alignEnd ? "end" : "start"}  mb-2`}>
+    <div className={` px-2 ${location.numberClinic == 2 ? " text-end md:text-start" : " text-end md:text-end" }   mb-2`}>
       <h2 className={`text-2xl font-bold ${alignEnd ? "text-end" : ""} mb-2`}>
         {location.title}
       </h2>

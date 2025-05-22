@@ -1,7 +1,5 @@
 "use client";
-
 import React, { useState, useEffect } from "react";
-import Header from "@/src/common/Header";
 import Hero from "../components/HeroSection";
 import Book from "../components/BookSection";
 import TrackBookSection from "../components/TrackProgressSection";
@@ -9,7 +7,7 @@ import NotifiedSection from "../components/NotifiedSection";
 import PointsSection from "../components/PointsSection";
 import LatestNewsSection from "../components/LatestNewsSection";
 
-import Img8 from "@/public/assets/img-loading.png";
+import ImgLoading from "@/public/assets/img-loading.png";
 import Image from "next/image";
 export default function Page() {
   const [isLoading, setIsLoading] = useState(true);
@@ -35,7 +33,7 @@ export default function Page() {
       <div className="fixed inset-0 bg-white z-50 flex flex-col items-center justify-center">
         <div className="image-loader w-[300px]  relative  h-[110px] ">
           <Image
-            src={Img8}
+            src={ImgLoading}
             alt="Small Ball"
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -57,8 +55,6 @@ export default function Page() {
       <NotifiedSection />
       <PointsSection />
       <LatestNewsSection />
-
-
     </div>
   );
 }

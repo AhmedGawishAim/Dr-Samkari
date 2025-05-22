@@ -4,7 +4,6 @@ import React from 'react';
 
 export default function InputField({ type = 'text', placeholder, icon: Icon, as = 'input', ...props }) {
   const Tag = as;
-  console.log(Tag);
   
   return (
     <div className="relative">

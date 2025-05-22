@@ -53,6 +53,7 @@ const Header = () => {
                       width={100}
                       height={100}
                       priority
+                     blurDataURL={Img3}
                       className="mx-auto w-full h-full"
                     />
                   </Link>

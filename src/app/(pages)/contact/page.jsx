@@ -54,7 +54,7 @@ export default function ContactPage() {
 
   // Func to display location section
   const renderLocationClinic = (location, alignEnd = false) => (
-    <div className={` text-end  md:text-${alignEnd ? "end" : "start"}  mb-2`}>
+    <div className={` px-2 text-end  md:text-${alignEnd ? "end" : "start"}  mb-2`}>
       <h2 className={`text-2xl font-bold ${alignEnd ? "text-end" : ""} mb-2`}>
         {location.title}
       </h2>
@@ -169,7 +169,7 @@ export default function ContactPage() {
           <div className="max-w-6xl mx-auto grid grid-cols-1 gap-5 md:gap-0 md:grid-cols-[1fr_50px_1fr] text-lg">
             {renderLocationClinic(LocationData[0], true)}
             {/* Icons */}
-            <div className="pt-[45px] hidden md:flex flex-col items-center">
+            <div className="pt-[45px]  hidden md:flex flex-col items-center">
               <p>
                 <GrLocation className="text-2xl" />
               </p>

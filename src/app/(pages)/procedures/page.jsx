@@ -183,8 +183,9 @@ export default function ProceduresSection() {
                                 alt={`img-before`}
                                 width={200}
                                 height={200}
-                                className="w-[180px] sm:w-[120px] md:w-[160px] h-[160px] filter brightness-50 hover:brightness-100 transition"
+                                className="w-[180px] sm:w-[120px] md:w-[160px] h-[160px] filter brightness-50 hover:brightness-100 focus:brightness-100 active:brightness-100 transition"
                             />
+
 
                             {index === 0 && (
                                 <div className="text-gray-700 text-xl before-text hidden md:block absolute bottom-[60px] left-[-50px] transform rotate-[-452deg]">
@@ -197,7 +198,7 @@ export default function ProceduresSection() {
                                 alt={`img-after`}
                                 width={200}
                                 height={200}
-                                className="w-[180px] sm:w-[120px] md:w-[160px] h-[160px] filter brightness-50 hover:brightness-100 transition"
+                                className="w-[180px] sm:w-[120px] md:w-[160px] h-[160px] filter brightness-50 hover:brightness-100 focus:brightness-100 active:brightness-100 transition"
                             />
                         </motion.div>
                     ))}
@@ -207,7 +208,7 @@ export default function ProceduresSection() {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay:0.6, ease: "easeOut" }}
+                    transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
                     className="text-footer text-gray-700 pt-[80px] text-center">
                     Unlock a ready-made, fully functional app designed by a top plastic surgeon to simplify clinic management,
                     enhance patient experience, and boost retention. From smart bookings to loyalty rewards, this code is plug-and-play —

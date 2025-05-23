@@ -9,21 +9,29 @@ import LatestNewsSection from "../components/LatestNewsSection";
 
 import ImgLoading from "@/public/assets/img-loading.png";
 import Image from "next/image";
+
 export default function Page() {
   const [isLoading, setIsLoading] = useState(true);
 
-  // loading page func.
   useEffect(() => {
-    // Disable scrolling during load
+    // prvent scrolling during load page
     document.body.classList.add("overflow-hidden");
-    // loading page timer
-    const timer = setTimeout(() => {
+
+    const handleLoad = () => {
       setIsLoading(false);
       document.body.classList.remove("overflow-hidden");
-    }, 3000); 
-    // clean memory for setimeout
+    };
+
+    // check if the page is already loaded
+    if (document.readyState === 'complete') {
+      handleLoad();
+    } else {
+      window.addEventListener('load', handleLoad);
+    }
+
+    // Cclean up when user leave this component for performance
     return () => {
-      clearTimeout(timer);
+      window.removeEventListener('load', handleLoad);
       document.body.classList.remove("overflow-hidden");
     };
   }, []);

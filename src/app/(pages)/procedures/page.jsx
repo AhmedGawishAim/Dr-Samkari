@@ -36,11 +36,6 @@ import ImgAfter6 from "@/public/assets/procedures/img-after6.jpg";
 
 
 export default function ProceduresSection() {
-    const [currentImg, setCurrentImg] = useState(ImgProced1);
-
-    const handleImageChange = () => {
-        setCurrentImg((prev) => (prev === ImgProced1 ? ImgProced2 : ImgProced1));
-    };
     // images for company supporter    
     const supporterImages = [
         ImgSupporter1,
@@ -79,21 +74,13 @@ export default function ProceduresSection() {
                         className="flex flex-col lg:justify-end lg:items-end w-full h-full"
                     >
                         <Image
-                            src={currentImg}
+                            src={ImgProced1}
                             width={380}
                             height={340}
                             alt="Aesthetic procedure"
                             className="rounded-3xl object-cover object-top w-[380px] h-[340px]"
                             quality={100}
                         />
-                        <div className="w-full flex justify-center">
-                            <button
-                                onClick={handleImageChange}
-                                className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-xl shadow hover:bg-blue-700 transition"
-                            >
-                                Change the current image
-                            </button>
-                        </div>
                     </motion.div>
 
                     {/* text section1 */}

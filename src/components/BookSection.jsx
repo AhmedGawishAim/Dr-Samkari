@@ -60,7 +60,7 @@ export default function BookSection() {
     return (
         <div className="book-section pt-[230px]" ref={containerRef}>
             <div className="container hero-container mx-auto  block relative">
-                <div className="w-[72%] mx-auto h-[500px]">
+                <div className="w-[66%] mx-auto h-[500px]">
                     {/* balls section 1 for book section */}
                     <div className="absolute w-full h-full top-0 left-0">
                         <motion.div className="absolute bottom-4 right-[20px] top-[-300px] z-[2]"

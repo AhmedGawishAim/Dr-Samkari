@@ -7,7 +7,7 @@ import ImgDimond from "@/public/assets/GIF-DIAMOND.gif";
 
 export default function PointsSection() {
   return (
-    <div className="pointssection py-32">
+    <div className="pointssection pt-0 pb-20">
       <div className="container mx-auto">
         <div className="content flex flex-col items-center">
           {/* Text title for ponits section */}
@@ -20,7 +20,7 @@ export default function PointsSection() {
               className="text-5xl  text-center flex justify-center items-center gap-3"
             >
               <span className="text-7xl ">
-                {" "}
+
                 Points That <span className="font-bold">Pay Off</span>
               </span>
             </motion.h1>

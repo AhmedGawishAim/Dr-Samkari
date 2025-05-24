@@ -1,6 +1,6 @@
-'use client';
-import React from 'react';
-import { motion } from 'framer-motion';
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import BorderIphoneImg from "@/public/assets/border-iphone.png";
 import LatestNewsImg from "@/public/assets/paper.png";
@@ -10,16 +10,78 @@ export default function LatestNewsSection() {
   return (
     <div className="pointssection py-5">
       <div className="container mx-auto">
-        <div className="w-[80%] mx-auto">
+        <div className="w-[90%] mx-auto">
           <div className="content flex flex-col w-full h-full items-center">
             <div className="box-phone relative w-[90%] h-full">
-              <Image
-                src={ImgBall}
-                alt="ball"
-                fill
-                className="!w-[120px] !h-[100px]"
-                priority={false}
-              />
+              {/* balls of newssection */}
+              <div className="balls">
+       
+                <div className=" absolute left-[90px] top-[100px]  !w-[120px] !h-[100px] z-[-2]">
+                  <Image
+                    src={ImgBall}
+                    alt="ball"
+                    fill
+                    className="!w-[120px] !h-[100px] filter blur-[5px]"
+                    priority={false}
+                  />
+                </div>
+
+                <div className=" absolute right-5 top-[60px] z-10 !w-[120px] !h-[100px]">
+                  <Image
+                    src={ImgBall}
+                    alt="ball"
+                    fill
+                    className="!w-[50px] !h-[50px]"
+                    priority={false}
+                  />
+                </div>
+                <div className=" absolute left-2 top-[200px] z-10 !w-[120px] !h-[100px]">
+                  <Image
+                    src={ImgBall}
+                    alt="ball"
+                    fill
+                    className="!w-[70px] !h-[70px]"
+                    priority={false}
+                  />
+                </div>
+                <div className=" absolute right-15 top-[250px] z-10 !w-[120px] !h-[100px]">
+                  <Image
+                    src={ImgBall}
+                    alt="ball"
+                    fill
+                    className="!w-[100px] !h-[100px] filter blur-[3px] "
+                    priority={false}
+                  />
+                </div>
+                 <div className=" absolute left-[90px] top-[500px]  !w-[120px] !h-[100px] z-[-2]">
+                  <Image
+                    src={ImgBall}
+                    alt="ball"
+                    fill
+                    className="!w-[120px] !h-[100px] filter blur-[2px]"
+                    priority={false}
+                  />
+                </div>
+                  <div className=" absolute right-[90px] top-[500px]  !w-[120px] !h-[100px] z-[-2]">
+                  <Image
+                    src={ImgBall}
+                    alt="ball"
+                    fill
+                    className="!w-[190px] !h-[130px] filter blur-[2px]"
+                    priority={false}
+                  />
+                </div>
+                <div className=" absolute right-[-150px] top-[580px]  !w-[120px] !h-[100px] z-[-2]">
+                  <Image
+                    src={ImgBall}
+                    alt="ball"
+                    fill
+                    className="!w-[190px] !h-[130px] filter blur-[8px]"
+                    priority={false}
+                  />
+                </div>
+              </div>
+
               {/* Background Image */}
               <motion.div
                 initial={{ opacity: 0, y: 100 }}
@@ -44,7 +106,7 @@ export default function LatestNewsSection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
                 >
-                  <div className="  absolute top-[1px] left-1/2 -translate-x-1/2 w-[80%] h-full" >
+                  <div className="  absolute top-[1px] left-1/2 -translate-x-1/2 w-[70%] h-full">
                     <Image
                       src={LatestNewsImg}
                       alt="Hero Background"
@@ -53,8 +115,11 @@ export default function LatestNewsSection() {
                       priority={false}
                     />
                   </div>
-                  <h2 className="text-[100px] !text-8xl  w-[100%]  absolute top-[130px] left-[48%] transform -translate-x-1/3 z-50 text-black">
-                  <a href="#" className="uppercase ">Latest News</a>
+
+                  <h2 className="text-[100px] !text-8xl  w-[100%]  absolute top-[130px] left-[52%] transform -translate-x-1/3 z-50 text-black">
+                    <a href="#" className="uppercase ">
+                      Latest News
+                    </a>
                   </h2>
                 </motion.div>
               </motion.div>
@@ -73,14 +138,17 @@ export default function LatestNewsSection() {
                     <div className="text-3xl font-bold leading-tight">
                       Upgrade Your Clinic
                     </div>
-                    <div className="text-xl text-center font-semibold font-sans -mt-0.5"> BUY OUR CODE</div>
+                    <div className="text-xl text-center font-semibold font-sans -mt-0.5">
+                      {" "}
+                      BUY OUR CODE
+                    </div>
                   </div>
                 </motion.a>
               </div>
               <motion.h2
                 initial={{ opacity: 0, y: 80 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.2, ease: 'easeOut', delay: 0.2 }}
+                transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
                 viewport={{ once: false }}
                 className="text-2xl md:text-3xl"
               >
@@ -88,7 +156,6 @@ export default function LatestNewsSection() {
                 unlocking free procedures through gamified engagement.
               </motion.h2>
             </div>
-
           </div>
         </div>
       </div>

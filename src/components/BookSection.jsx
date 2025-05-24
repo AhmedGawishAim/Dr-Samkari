@@ -60,25 +60,57 @@ export default function BookSection() {
     return (
         <div className="book-section pt-[230px]" ref={containerRef}>
             <div className="container hero-container mx-auto  block relative">
-                <div className="w-[66%] mx-auto h-[500px]">
+                <div className="w-[67%] mx-auto h-[500px]">
                     {/* balls section 1 for book section */}
                     <div className="absolute w-full h-full top-0 left-0">
                         <motion.div className="absolute bottom-4 right-[20px] top-[-300px] z-[2]"
                             style={{ y: y1 }}
                         >
-                            <Image src={BallImg1} alt="Small Ball" width={330} height={0} priority />
+                            <Image src={BallImg1} alt="Small Ball" width={230} height={0} priority />
                         </motion.div>
 
                         <motion.div className="absolute  right-[800px] top-[-30px] z-[-10] filter blur-xl"
                             style={{ y: y3 }}
                         >
-                            <Image src={BallImg1} alt="Small Ball" width={330} height={0} priority />
+                            <Image src={BallImg1} alt="Small Ball" width={180} height={0} priority />
                         </motion.div>
 
                         <motion.div className="absolute bottom-[100px] left-[300px] z-[20]"
                             style={{ y: y2 }}
                         >
-                            <Image src={BallImg1} alt="Small Ball" width={80} height={0} priority />
+                            <motion.div
+                                className="absolute bottom-4 right-[-120px] z-[2]"
+                                style={{ y: y1 }}
+                                initial={{ opacity: 0, scale: 0.4 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: false, amount: 0.3 }}
+                                transition={{ duration: 0.6, ease: 'easeOut' }}
+                            >
+
+                                <Image src={BallImg1} alt="Small Ball" width={60} height={0} priority />
+                            </motion.div>
+                        </motion.div>
+
+                        <motion.div
+                            className="absolute bottom-[80px] left-[100px] z-[2]"
+                            style={{ y: y1 }}
+                            initial={{ opacity: 0, scale: 0.4 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: false, amount: 0.3 }}
+                            transition={{ duration: 0.6, ease: 'easeOut' }}
+                        >
+                            <Image src={BallImg1} alt="Small Ball" width={180} height={0} priority />
+                        </motion.div>
+
+                        <motion.div
+                            className="absolute bottom-4 right-[-120px] z-[2]"
+                            style={{ y: y1 }}
+                            initial={{ opacity: 0, scale: 0.4 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: false, amount: 0.3 }}
+                            transition={{ duration: 0.6, ease: 'easeOut' }}
+                        >
+                            <Image src={BallImg1} alt="Small Ball" width={300} height={0} priority />
                         </motion.div>
 
                     </div>
@@ -137,18 +169,27 @@ export default function BookSection() {
                                     alt="Hero Image"
                                     fill
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                    className="absolute  !left-[-130px]  !w-[420px] !h-[580px]"
+                                    className="absolute  !left-[-130px]  !w-[400px] !h-[580px]"
                                     priority={false}
                                 />
 
                             </motion.div>
-
-                            
                         </motion.div>
+                        <div className="bubles">
 
-                        <motion.div className="absolute bottom-[-80px] right-[200px] z-[10]">
-                                <Image src={BallImg1} alt="Small Ball" width={230} height={0} priority />
+                            <motion.div
+                             initial={{ opacity: 0, scale: 0.2 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: false, amount: 0.3 }}
+                                transition={{ duration: 0.9, ease: 'easeOut',delay:0.5 }}
+                             className="absolute bottom-[20px] right-[230px] z-[10]">
+                                <Image src={BallImg1} alt="Small Ball" width={200} height={0} priority />
                             </motion.div>
+                            <motion.div className="absolute top-[150px] right-[-10px] z-[1000]">
+                                <Image src={BallImg1} alt="Small Ball" width={60} height={0} priority />
+                            </motion.div>
+                        </div>
+
 
                     </div>
                 </div>

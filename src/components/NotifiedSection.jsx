@@ -23,7 +23,7 @@ const ballConfigs = [
 function NotifiedSection() {
     const [animateEnd, setAnimateEnd] = useState(false);
     const [isSmallScreen, setIsSmallScreen] = useState(false);
-    // check screen size on moble or on xl scren for bubble width responsive..
+    // check screen size on moble or on xl screen for bubble width responsive..
     useEffect(() => {
         const checkScreenSize = () => {
             setIsSmallScreen(window.innerWidth < 768);
@@ -118,7 +118,7 @@ function NotifiedSection() {
                                 alt="Phone"
                                 width={600}
                                 height={20}
-                                className="object-contain w-full h-[620px]"
+                                className="object-contain w-full h-[580px]"
                             />
                         </motion.div>
                         {/* Shadow1 of phone*/}

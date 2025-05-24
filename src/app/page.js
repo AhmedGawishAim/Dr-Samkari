@@ -11,7 +11,7 @@ import ImgLoading from "@/public/assets/img-loading.png";
 import Image from "next/image";
 
 export default function Page() {
-  const [isLoading, setIsLoading] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
           console.log(document.readyState );

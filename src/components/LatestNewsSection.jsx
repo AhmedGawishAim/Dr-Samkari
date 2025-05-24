@@ -8,11 +8,11 @@ import ImgBall from "@/public/assets/ball1-hero.png";
 
 export default function LatestNewsSection() {
   return (
-    <div className="pointssection py-32">
+    <div className="pointssection py-5">
       <div className="container mx-auto">
         <div className="w-[80%] mx-auto">
           <div className="content flex flex-col w-full h-full items-center">
-            <div className="box-phone relative w-full h-full">
+            <div className="box-phone relative w-[90%] h-full">
               <Image
                 src={ImgBall}
                 alt="ball"
@@ -32,7 +32,7 @@ export default function LatestNewsSection() {
                   src={BorderIphoneImg}
                   alt="Hero Background"
                   fill
-                  className="w-full !h-[600px]"
+                  className="w-full !h-[550px]"
                   priority={false}
                 />
 
@@ -40,11 +40,11 @@ export default function LatestNewsSection() {
                 <motion.div
                   className="overflow-hidden relative "
                   initial={{ height: 100, width: "100%" }}
-                  whileInView={{ height: "100%", opacity: 1 }}
+                  whileInView={{ height: "80%", opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
                 >
-                  <div className="  absolute top-[10px] left-1/2 -translate-x-1/2 w-[80%] h-full" >
+                  <div className="  absolute top-[1px] left-1/2 -translate-x-1/2 w-[80%] h-full" >
                     <Image
                       src={LatestNewsImg}
                       alt="Hero Background"
@@ -53,14 +53,14 @@ export default function LatestNewsSection() {
                       priority={false}
                     />
                   </div>
-                  <h2 className="text-[100px]  w-[100%]  absolute top-[150px] left-1/2 transform -translate-x-1/3 z-50 text-black">
+                  <h2 className="text-[100px] !text-8xl  w-[100%]  absolute top-[130px] left-[48%] transform -translate-x-1/3 z-50 text-black">
                   <a href="#" className="uppercase ">Latest News</a>
                   </h2>
                 </motion.div>
               </motion.div>
             </div>
 
-            <div className="box-text w-[80%] md:w-[50%] text-center space-y-6 pt-[180px]">
+            <div className="box-text w-[80%] md:w-[50%] text-center space-y-6 mt-[-230px]">
               <div className="flex justify-center">
                 <motion.a
                   href="#"

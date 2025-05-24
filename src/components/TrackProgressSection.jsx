@@ -7,7 +7,6 @@ import Image from "next/image";
 import ImgIphone from "@/public/assets/iphone2.png";
 import ImgBall from "@/public/assets/ball1-hero.png";
 import ImgButtonProgress from "@/public/assets/img-progress.svg";
-import { CiHeart } from "react-icons/ci";
 import { IoIosArrowDown } from "react-icons/io";
 
 export default function TrackProgressSection() {
@@ -68,13 +67,13 @@ export default function TrackProgressSection() {
     return (
         <div className="track-progress-section pt-[400px] " ref={containerRef}>
             <div className="container mx-auto hero-container block relative ">
-                <div className="w-[100%] xl:w-[90%] mx-auto h-[640px]">
+                <div className="w-[90%] 2xl:w-[77%] mx-auto h-[540px]">
                     {/* trackprogress balls1 */}
                     <motion.div
-                        initial={{ width: 0, height: 0 }}
-                        whileInView={{ width: 300, height: 250 }}
+                      initial={{ scale: 0.5, opacity: 0 }}
+                        whileInView={{ scale: 1, opacity: 1 }}
                         viewport={{ once: false }}
-                        transition={{ duration: 2, ease: "easeOut", delay: 1 }}
+                        transition={{ duration: 1, ease: "easeOut", delay: 1 }}
                         className="absolute !top-[50px] !left-[-50px] z-1 "
                     >
                         <Image
@@ -88,41 +87,60 @@ export default function TrackProgressSection() {
                     </motion.div>
                     {/* trackprogress balls2 */}
                     <motion.div
-                        initial={{ width: 0, height: 0 }}
-                        whileInView={{ width: 100, height: 80 }}
+                        initial={{ scale: 0.5, opacity: 0 }}
+                        whileInView={{ scale: 1, opacity: 1 }}
                         viewport={{ once: false }}
-                        transition={{ duration: 2, ease: "easeOut", delay: 0.5 }}
-                        className="absolute !bottom-[120px] !right-[400px] z-1 "
+                        transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
+                        className="absolute !bottom-[-180px] !right-[60px] z-[20] "
                     >
                         <Image
                             src={ImgBall}
                             alt="Hero Image"
-                            width={200}
-                            height={120}
+                            width={400}
+                            height={0}
                             className="w-full h-full "
                             priority={false}
                         />
-                    </motion.div>
-                    {/* trackprogress balls3 */}
-                    {/* <motion.div
-                        className="absolute bottom-4 left-[700px] top-[-300px] z-[4]"
-                        style={{ y: y2 }}
+                    </motion.div>     
+                     <motion.div
+                        initial={{ scale: 0.5, opacity: 0 }}
+                        whileInView={{ scale: 1, opacity: 1 }}
+                        viewport={{ once: false }}
+                        transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
+                        className="absolute !bottom-[-50px] !left-[540px] z-[-20] "
                     >
-                        <Image src={ImgBall} alt="Small Ball" width={130} height={0} priority />
-                    </motion.div> */}
-                    {/* trackprogress balls4 */}
+                        <Image
+                            src={ImgBall}
+                            alt="Hero Image"
+                            width={300}
+                            height={0}
+                            className="w-full h-full "
+                            priority={false}
+                        />
+                    </motion.div>    
+                    {/* trackprogress balls3 */}
                     <motion.div
-                        className="absolute bottom-4 right-[20px] top-[-300px] z-[3]"
+                        className="absolute right-[100px] top-[80px] z-[3]"
                         style={{ y: y1 }}
                     >
-                        <Image src={ImgBall} alt="Small Ball" width={200} height={0} priority />
+                        <Image src={ImgBall} alt="Small Ball" width={50} height={0} priority />
                     </motion.div>
-                    {/* trackprogress balls5 */}
+                    {/* trackprogress balls4 */}
                     <motion.div
-                        className="absolute bottom-4 right-[700px] top-[-30px] z-[-10]  animated-image"
+                        className="absolute bottom-4 right-[800px] top-[30px] z-[-10]  animated-image"
                         style={{ y: y3 }}
                     >
+                          <motion.div
+                      initial={{ scale: 0.5, opacity: 0 }}
+                        whileInView={{ scale: 4, opacity: 1 }}
+                        viewport={{ once: false }}
+                        transition={{ duration: 0.5, ease: "easeOut", delay: 1 }}
+                        className="absolute !top-[50px] !left-[-50px] z-1 "
+                    >
+
+
                         <Image src={ImgBall} alt="Small Ball" width={230} height={0} priority />
+                    </motion.div>
                     </motion.div>
                     {/* content  Section  */}
                     <div className=" relative mx-auto w-[90%] left-0 h-full">
@@ -145,12 +163,12 @@ export default function TrackProgressSection() {
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                         >
-                            <motion.div className="w-[40%] h-[650px] relative left-[-11%]  ">
+                            <motion.div className="w-[40%] h-[590px] relative left-[-13%]  ">
                                 {/* iphone img */}
                                 <Image
                                     src={ImgIphone}
                                     alt="Hero Image"
-                                    className="absolute !top-[-93px] !left-[10px] w-[200px] !h-[750px]  transform   "
+                                    className="absolute !top-[-93px] !left-[10px] !w-[380px] !h-[600px]  transform   "
                                     priority={false}
                                     fill
                                 />
@@ -161,7 +179,7 @@ export default function TrackProgressSection() {
                                     whileInView={{ x: 0, opacity: 1 }}
                                     transition={{ duration: 0.2, ease: "easeOut", delay: 0.2 }}
                                     viewport={{ once: false }}
-                                    className="  absolute bottom-[190px] !left-[160px] h-[100px] w-[400px]">
+                                    className="  absolute bottom-[190px] !left-[120px] h-[100px] w-[400px]">
                                     <div className="box-image relative">
                                         <Image
                                             src={ImgButtonProgress}
@@ -183,7 +201,7 @@ export default function TrackProgressSection() {
                                     whileInView={{ x: 0, opacity: 1 }}
                                     transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
                                     viewport={{ once: false }}
-                                    className="  absolute bottom-[220px] !left-[190px] h-[100px] w-[400px]">
+                                    className="  absolute bottom-[220px] !left-[150px] h-[100px] w-[400px]">
                                     <div className="box-image relative">
                                         <Image
                                             src={ImgButtonProgress}
@@ -205,7 +223,7 @@ export default function TrackProgressSection() {
                                     whileInView={{ x: 0, opacity: 1 }}
                                     transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
                                     viewport={{ once: false }}
-                                    className="  absolute bottom-[260px] !left-[220px] h-[100px] w-[400px]">
+                                    className="  absolute bottom-[260px] !left-[180px] h-[100px] w-[400px]">
                                     <div className="box-image relative">
                                         <Image
                                             src={ImgButtonProgress}
@@ -228,7 +246,7 @@ export default function TrackProgressSection() {
                                     transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}
                                     viewport={{ once: false }}
 
-                                    className="  absolute bottom-[300px] !left-[260px] h-[100px] w-[400px]">
+                                    className="  absolute bottom-[300px] !left-[220px] h-[100px] w-[400px]">
                                     <div className="box-image relative h-full">
                                         <Image
                                             src={ImgButtonProgress}

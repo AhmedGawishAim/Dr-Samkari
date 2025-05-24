@@ -21,8 +21,8 @@ export default function BookSection() {
     const leftBoxWidth = useTransform(scrollYProgress, [0, 0.1], ["20%", "100%"]);
     const leftBoxOpacity = useTransform(scrollYProgress, [0.1, 0.2], [0, 1]);
     const BokkImgAnimation = useTransform(scrollYProgress, [0, 0.2, 1], ["-110%", "20%", "1%"], { clamp: false });
-    const imageX = useTransform(scrollYProgress, [0, 0.6, 1], ["50%", "120%", "-20%"]);
-    const imageY = useTransform(scrollYProgress, [0, 0.6, 1], ["-0%", "-0%", "2%"]);
+    const imageX = useTransform(scrollYProgress, [0, 0.3, 1], ["120%", "160%", "2%"]);
+    const imageY = useTransform(scrollYProgress, [0, 0.6, 1], ["-10%", "-0%", "2%"]);
     // when user reach to the section that will animate run when leave off the animation
     useEffect(() => {
         if (inView) {
@@ -60,7 +60,7 @@ export default function BookSection() {
     return (
         <div className="book-section pt-[230px]" ref={containerRef}>
             <div className="container hero-container mx-auto  block relative">
-                <div className="w-[72%] mx-auto h-[550px]">
+                <div className="w-[72%] mx-auto h-[500px]">
                     {/* balls section 1 for book section */}
                     <div className="absolute w-full h-full top-0 left-0">
                         <motion.div className="absolute bottom-4 right-[20px] top-[-300px] z-[2]"
@@ -91,7 +91,6 @@ export default function BookSection() {
                             viewport={{ once: false }}
                             transition={{ duration: 1, ease: "easeOut" }}
                         />
-
                         {/* this section for texts content for book section left */}
                         <motion.div className="box-righ w-[10%] z-[200] mx-auto absolute right-0 top-0 h-full flex flex-col justify-center text-white text-center md:text-left mt-6 md:mt-0"
                             style={{
@@ -132,22 +131,25 @@ export default function BookSection() {
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                         >
-                            <motion.div style={{ x: imageX, y: imageY }} className="w-[50%] relative right-[-40%]">
+                            <motion.div style={{ x: imageX, y: imageY }} className="w-[50%] top-[-100px] relative right-[-2%]">
                                 <Image
                                     src={IphoneImg1}
                                     alt="Hero Image"
                                     fill
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                    className="absolute  !left-[-130px]  !w-[480px] !h-[680px]"
+                                    className="absolute  !left-[-130px]  !w-[420px] !h-[580px]"
                                     priority={false}
                                 />
 
                             </motion.div>
 
-                            <motion.div className="absolute bottom-[-80px] right-[200px] z-[-10]">
+                            
+                        </motion.div>
+
+                        <motion.div className="absolute bottom-[-80px] right-[200px] z-[10]">
                                 <Image src={BallImg1} alt="Small Ball" width={230} height={0} priority />
                             </motion.div>
-                        </motion.div>
+
                     </div>
                 </div>
             </div>

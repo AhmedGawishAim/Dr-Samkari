@@ -50,6 +50,27 @@ export default function HeroSection() {
                         priority
                     />
                 </motion.div>
+                   <motion.div
+                    className="absolute  left-[-290px] bottom-[-1200px] z-[40]"
+                    animate={{
+                        y: ["1px", "2px", "20px", "-20px", "0px"],
+                    }}
+                    transition={{
+                        duration: 3,
+                        ease: [0.42, 0, 0.58, 1],
+                        repeat: Infinity,
+                        repeatType: "loop",
+                    }}
+                >
+                    <Image
+                        src={BlurImg1}
+                        alt="Blurred Ball"
+                        className="filter blur-sm"
+                        width={480}
+                        height={0}
+                        priority
+                    />
+                </motion.div>
             </div>
             {/* main content of hero section */}
             <div className="container hero-container mx-auto z-[10] flex flex-col md:flex-row items-center justify-between h-[500px] relative">
@@ -69,22 +90,37 @@ export default function HeroSection() {
                 </motion.div>
 
                 {/*left section of hero section (doctor image)*/}
-                <div className="box-right w-full h-full relative z-5">
+                <div className="box-left w-full h-full relative z-5">
                     <Image src={DoctorImg1} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" height={0} alt="Hero Image" fill className="object-fill absolute !top-[-93px] !left-[-50px] !h-[110%]" priority />
                     {/* second ball ovrlay in hero section */}
                     <motion.div className="absolute bottom-[px] left-[50%]  z-[-1] overflow-hidden">
                         <motion.div style={{ y: y3 }}>
                             <Image src={BallImg1} alt="Large Ball" width={250} height={0} priority />
+
+                        </motion.div>
+                    </motion.div>
+
+                    <motion.div
+                        className="absolute left-[300px] bottom-[160px] z-[-1]"
+                    >
+                        <motion.div style={{ y: y3 }}>
+                            <Image
+                                src={BallImg1}
+                                alt="Small Floating Ball"
+                                width={150}
+                                height={0}
+                                priority
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            />
                         </motion.div>
                     </motion.div>
                 </div>
                 {/*right section of hero section texts*/}
-                <motion.div
+                <motion.div className="box-right relative md:ml-[-100px] w-full h-full flex flex-col justify-center text-white text-center md:text-left mt-6 md:mt-0 z-20"
                     style={{
                         y: HeroContentAnimation,
                         opacity: contentHeroOpacity
                     }}
-                    className="box-left relative md:ml-[-100px] w-full h-full flex flex-col justify-center text-white text-center md:text-left mt-6 md:mt-0 z-20"
 
                 >
                     {/* content of hero section */}
@@ -121,7 +157,6 @@ export default function HeroSection() {
                                     <div className="text-xl font-semibold font-sans -mt-0.5">App Store</div>
                                 </div>
                             </motion.a>
-
                             {/* Google Play Button */}
                             <motion.a
                                 href="#"
@@ -138,10 +173,11 @@ export default function HeroSection() {
                                     <div className="text-xl font-semibold font-sans -mt-0.5">Google Play</div>
                                 </div>
                             </motion.a>
+
                         </motion.div>
                         {/* five left small ball ovrlay in hero section */}
                         <motion.div
-                            className="absolute bottom-4 right-[160px] top-[100px] z-[3]"
+                            className="absolute right-[160px] top-[100px] z-[3]"
                         >
                             <Image
                                 src={BallImg1}
@@ -151,9 +187,48 @@ export default function HeroSection() {
                                 priority
                             />
                         </motion.div>
+
+
+
+
+
+
                     </div>
 
                 </motion.div>
+                {/* ball */}
+                <motion.div
+                style={{
+                        y: HeroContentAnimation,
+                    }}
+                    className="absolute right-[-26px] bottom-[150px] z-[0]"
+                >
+                    <Image
+                        src={BallImg1}
+                        alt="Small Floating Ball"
+                        width={60}
+                        height={0}
+                        priority
+                    />
+                </motion.div>
+                {/* ball */}
+                <motion.div
+                style={{
+                        y: HeroContentAnimation,
+                    }}
+                    className="absolute right-[520px] bottom-[30px] z-[0]"
+                >
+                    <Image
+                        src={BallImg1}
+                        alt="Small Floating Ball"
+                        width={150}
+                        height={0}
+                        priority
+                    />
+                </motion.div>
+                
+
+
             </div>
         </div>
     );

@@ -104,12 +104,12 @@ export default function TrackProgressSection() {
                         />
                     </motion.div>
                     {/* trackprogress balls3 */}
-                    <motion.div
+                    {/* <motion.div
                         className="absolute bottom-4 left-[700px] top-[-300px] z-[4]"
                         style={{ y: y2 }}
                     >
                         <Image src={ImgBall} alt="Small Ball" width={130} height={0} priority />
-                    </motion.div>
+                    </motion.div> */}
                     {/* trackprogress balls4 */}
                     <motion.div
                         className="absolute bottom-4 right-[20px] top-[-300px] z-[3]"

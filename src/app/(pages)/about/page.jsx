@@ -130,7 +130,7 @@ const AboutPage = () => {
 
                   if (section.type === "paragraph") {
                     return (
-                      <h2 className="text-sm pb-5 leading-[20px]">
+                      <h2 className="text-[17px] pb-5 leading-[20px]">
                         {section.text}
                       </h2>
                     );

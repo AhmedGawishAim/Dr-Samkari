@@ -72,9 +72,9 @@ export default function OurApp() {
     },
   ];
   return (
-    <div className="our-app-page">
+    <div className="updates-page overflow-hidden px-5">
       <div className="container mx-auto text-[30px] text-center">
-        <div className="content md:w-[90%] lg:w-[80%]  mx-auto pt-[200px]">
+        <div className="content md:w-[90%] lg:w-[70%]  mx-auto pt-[200px]">
           <div className="box-procedure">
             <div className="box-text ">
               {faqsData.map((faq, index) => (
@@ -115,7 +115,7 @@ export default function OurApp() {
                           <Image
                             src={BlurImg1}
                             alt="Blurred Ball"
-                            className="filter blur-[3px]"
+                            className="filter w-[250px] sm:w-[350px] blur-[3px]"
                             width={350}
                             height={0}
                             priority
@@ -147,7 +147,7 @@ export default function OurApp() {
                     />
                     {index == 4 && (
                       <div className="balls">
-                        <div className="absolute w-[105%] h-[120%]  overflow-hidden  left-[-2%] bottom-[0px] z-[40]">
+                        <div className="absolute w-[105%] h-[100%]  overflow-hidden  left-[-2%] bottom-[0px] z-[40]">
                           <Image
                             src={OverLayImg}
                             alt="Blurred Ball"

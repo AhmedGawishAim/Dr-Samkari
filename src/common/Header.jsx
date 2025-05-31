@@ -22,7 +22,7 @@ const Header = () => {
     <header className="header sticky w-full z-[25] bg-[#CDA349]">
       <div className="container mx-auto px-4 overflow-hidden">
         <div className="flex h-16 items-center justify-center  py-[20px]">
-            <nav aria-label="Global" className='hidden md:block lg:w-[80vw]  '>
+            <nav aria-label="Global" className='hidden md:block lg:w-[100vw]  '>
               <ul className="flex items-center justify-center gap-12 text-[15px] nav">
                 {/* First 3 items */}
                 {navItems.slice(0, 3).map(({ label, href }) => {

@@ -139,9 +139,9 @@ left: 235px !important;
 .about-page .about-overlay-img {
   margin: auto;
 background-image: url("/assets/hero-overlay.png");
-  background-position: center;
+  background-position: right;
   background-size: cover;
-  border-radius: 10px;
+  transform:rotate(180deg)
  
 }
 .about-img-doctor{

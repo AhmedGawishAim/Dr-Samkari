@@ -163,7 +163,7 @@ export default function BookSection() {
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                         >
-                            <motion.div style={{ x: imageX, y: imageY }} className="w-[50%] top-[-100px] relative right-[-2%]">
+                            <motion.div style={{ x: imageX, y: imageY }} className="w-[50%] top-[-30px] relative right-[-2%]">
                                 <Image
                                     src={IphoneImg1}
                                     alt="Hero Image"

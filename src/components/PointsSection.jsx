@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import ImgIphnoe from "@/public/assets/iphone4.png";
-import ImgDimond from "@/public/assets/GIF-DIAMOND.gif";
+import ImgDimond from "@/public/assets/Diamond.gif";
 
 export default function PointsSection() {
   return (
@@ -75,6 +75,17 @@ export default function PointsSection() {
                 priority
                 unoptimized
               />
+                 {/* <video width="320" height="240" controls preload="none">
+      <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4
+" type="video/mp4" />
+      <track
+        src="/path/to/captions.vtt"
+        kind="subtitles"
+        srcLang="en"
+        label="English"
+      />
+      Your browser does not support the video tag.
+    </video> */}
             </motion.div>
           </div>
         </div>

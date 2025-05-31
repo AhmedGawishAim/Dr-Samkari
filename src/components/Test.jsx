@@ -1,62 +1,43 @@
-// "use client"
-// import { useState, useRef, useLayoutEffect } from "react";
-// import {
-//   motion,
-//   useViewportScroll,
-//   useTransform,
-//   useSpring,
-//   useReducedMotion,
-// } from "framer-motion";
-// import Image from "next/image";
-// import ImgIphone from "@/public/assets/iphone2.png";
-// import ImgBall from "@/public/assets/ball1-hero.png";
-// const ParallaxBox = () => {
-//   const prefersReducedMotion = useReducedMotion();
-//   const [elementTop, setElementTop] = useState(0);
-//   const [clientHeight, setClientHeight] = useState(0);
-//   const ref = useRef(null);
-//   const offset = 50;
+"use client";
 
-//   const { scrollY } = useViewportScroll();
-//   const initial = elementTop - clientHeight+5000;
-//   const final = elementTop + offset-20000;
+import { useEffect, useState } from "react";
+import Image from "next/image";
 
-//   const yRange = useTransform(scrollY, [initial, final], [offset, -offset]);
-//   const y = useSpring(yRange, { stiffness: 400, damping: 90 });
+export default function MobileScrollAnimation() {
+  const [scrollY, setScrollY] = useState(0);
 
-//   useLayoutEffect(() => {
-//     const element = ref.current;
-//     const onResize = () => {
-//       if (!element) return;
-//       setElementTop(
-//         element.getBoundingClientRect().top + window.scrollY ||
-//         window.pageYOffset
-//       );
-//       setClientHeight(window.innerHeight);
-//     };
-//     onResize();
-//     window.addEventListener("resize", onResize);
-//     return () => window.removeEventListener("resize", onResize);
-//   }, []);
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
 
-//   if (prefersReducedMotion) {
-//     return (
-//       <div>
-//         {/* Static fallback (no parallax) */}
-//         <Image src={ImgBall} alt="Sample" width={300} height={200} />
-//       </div>
-//     );
-//   }
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-//   return (
-//     <motion.div ref={ref} style={{ y }}>
-//       {/* Example content (change this as needed) */}
-//       <Image src={ ImgIphone} alt="Sample" width={300} height={200} />
-//     </motion.div>
-//   );
-// };
+  // Calculate translateY with max 500px cap
+  const translateY = Math.min(scrollY * 0.1, 50);
 
-// export default ParallaxBox;
+  return (
+    <div className="min-h-[200vh] hidden bg-gradient-to-b from-[#f0f4f8] via-[#e0f7fa] to-[#b2ebf2] overflow-x-hidden font-sans">
+      <div
+        className="fixed top-[50px] left-[60%] w-[250px] z-10 transition-transform duration-200 ease-in-out"
+        style={{ transform: `translate(-50%, ${translateY}px)` }}
+      >
+        <Image
+          src="https://dr-samkari.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fiphone1.f393ab0d.png&w=640&q=75"
+          alt="Mobile"
+          width={500}
+          height={800}
+          className="!w-[550px] h-[600px]"
+        />
+      </div>
 
-
-
+      <div className="mt-[600px] px-4 text-center text-xl text-gray-800 space-y-12">
+        <p>Scroll down to see the mobile phone move with you.</p>
+        <p>It will stop moving after translating 500px down.</p>
+        <p>Keep scrolling for demo purposes.</p>
+      </div>
+    </div>
+  );
+}

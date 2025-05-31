@@ -9,11 +9,11 @@ import ImgBall from "@/public/assets/ball1-hero.png";
 export default function LatestNewsSection() {
   // bubbles data
   const bubblesLatestNews = [
-    { left: "90px", top: "100px", width: "120px", height: "100px", blur: "5px", zIndex: -2 },
+    { left: "90px", top: "100px", width: "100px", height: "100px", blur: "5px", zIndex: -2 },
     { right: "5px", top: "60px", width: "50px", height: "50px", zIndex: 10 },
     { left: "2px", top: "200px", width: "70px", height: "70px", zIndex: 10 },
     { right: "15px", top: "250px", width: "100px", height: "100px", blur: "3px", zIndex: 10 },
-    { left: "90px", top: "500px", width: "120px", height: "100px", blur: "2px", zIndex: -2 },
+    { left: "90px", top: "500px", width: "120px", height: "120px", blur: "2px", zIndex: -2 },
     { right: "90px", top: "500px", width: "130px", height: "130px", blur: "2px", zIndex: -2 },
     { right: "-150px", top: "580px", width: "120px", height: "120px", blur: "8px", zIndex: -2 },
   ];

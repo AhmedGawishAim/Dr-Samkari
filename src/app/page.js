@@ -65,7 +65,7 @@ export default function Page() {
     <div className="animate-fadeIn">
       <Hero />
       <Book />
-      {/* <Test/> */}
+      <Test/>
       <TrackBookSection />
       <NotifiedSection />
       <PointsSection />

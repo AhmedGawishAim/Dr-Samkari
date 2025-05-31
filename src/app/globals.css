@@ -25,7 +25,7 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
-    /* height: 6000px; */
+    height: 3000px;
 }
 
 /* style for hero section */
@@ -151,6 +151,34 @@ background-image: url("/assets/hero-overlay.png");
 }
 
 
+/* media query */
+
+
+@media screen and (max-width: 420px) {
+  .before-imgs{
+    padding-inline:0 !important;
+  }
+  .img-before {
+   width:120px !important;
+  }
+
+  .img-after {
+   width:120px !important;
+  }
+}
+
+@media screen and (max-width: 350) {
+  .before-imgs{
+    padding-inline:0 !important;
+  }
+  .img-before {
+   width:100px !important;
+  }
+
+  .img-after {
+   width:100px !important;
+  }
+}
 
 
 

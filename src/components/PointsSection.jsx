@@ -73,6 +73,7 @@ export default function PointsSection() {
                 height={500}
                 className="object-contain"
                 priority
+                unoptimized
               />
             </motion.div>
           </div>

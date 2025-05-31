@@ -53,6 +53,7 @@ const aboutSectionsData = [
   }
 ];
 
+
 const AboutPage = () => {
   return (
     <div className="about-page mt-[20px]">

@@ -149,7 +149,7 @@ export default function ProceduresSection() {
 
 
                 {/* Before and After section for proced */}
-                <div className="before-imgs px-5 lg:px-0 pt-[100px] relative flex flex-wrap md:flex-nowrap justify-center items-center gap-4">
+                <div className="before-imgs px-5 lg:px-0 pt-[100px] relative flex flex-col md:flex-row flex-wrap md:flex-nowrap justify-center items-center gap-4">
                     {proceduresImages.map((pair, index) => (
                         <motion.div
                             key={index}
@@ -157,10 +157,10 @@ export default function ProceduresSection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
-                            className="relative flex md:flex-col items-center gap-8 cursor-pointer"
+                            className="relative flex md:flex-col items-center gap-4 cursor-pointer"
                         >
                             {index === 0 && (
-                                <div className="text-gray-700 text-xl before-text hidden md:block absolute top-[60px] left-[-50px] transform rotate-[-452deg]">
+                                <div className="text-gray-700 text-xl before-text top-[-41px] left-[16%] rotate-0 md:block absolute md:top-[60px] md:left-[-50px] transform md:rotate-[-452deg]">
                                     Before
                                 </div>
                             )}
@@ -168,14 +168,14 @@ export default function ProceduresSection() {
                             <Image
                                 src={pair.before}
                                 alt={`img-before`}
-                                width={200}
+                                width={120}
                                 height={200}
-                                className="w-[180px] sm:w-[120px] md:w-[160px] h-[160px] filter brightness-50 hover:brightness-100 focus:brightness-100 active:brightness-100 transition"
+                                className="img-before   sm:w-[180px] sm:h-[180px]   md:w-[160px] h-[160px] filter brightness-50 hover:brightness-100 focus:brightness-100 active:brightness-100 transition"
                             />
 
 
                             {index === 0 && (
-                                <div className="text-gray-700 text-xl before-text hidden md:block absolute bottom-[60px] left-[-50px] transform rotate-[-452deg]">
+                                <div className="text-gray-700 text-xl before-text  md:block absolute bottom-[190px] left-[66%] md:bottom-[60px] md:left-[-44px] transform md:rotate-[-452deg]">
                                     After
                                 </div>
                             )}
@@ -183,9 +183,9 @@ export default function ProceduresSection() {
                             <Image
                                 src={pair.after}
                                 alt={`img-after`}
-                                width={200}
+                                width={120}
                                 height={200}
-                                className="w-[180px] sm:w-[120px] md:w-[160px] h-[160px] filter brightness-50 hover:brightness-100 focus:brightness-100 active:brightness-100 transition"
+                                className=" img-after  sm:w-[180px] sm:h-[180px] md:w-[160px] h-[160px] filter brightness-50 hover:brightness-100 focus:brightness-100 active:brightness-100 transition"
                             />
                         </motion.div>
                     ))}

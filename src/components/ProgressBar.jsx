@@ -25,6 +25,7 @@ const DynamicProgressBar = () => {
 
     return () => clearInterval(interval);
   }, [isInView]);
+
   // toggle heart for track section
   const toggleHeart = () => {
     setIsLiked((prev) => !prev);

@@ -109,9 +109,10 @@ const AboutPage = () => {
                 {aboutSectionsData.map((section, index) => {
                   if (section.type === "heading") {
                     return (
-                      <React.Fragment key={index}>
+                      <div key={index}>
                         {section.title && (
                           <h1
+                         
                             className={`text-[44px] ${
                               section.bold ? "font-bold" : " italic"
                             }`}
@@ -124,7 +125,7 @@ const AboutPage = () => {
                             {section.subtitle}
                           </h2>
                         )}
-                      </React.Fragment>
+                      </div>
                     );
                   }
 

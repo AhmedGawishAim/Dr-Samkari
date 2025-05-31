@@ -30,7 +30,7 @@ export default function HeroSection() {
             {/* first big left ball ovrlay in hero section animation o */}
             <div className="container mx-auto relative ">
                 <motion.div
-                    className="absolute bottom-4 left-[-200px] top-[-230px] z-[40]"
+                    className="absolute bottom-4 left-[-200px] top-[-150px] z-[40]"
                     animate={{
                         y: ["1px", "20px", "20px", "-20px", "0px"],
                     }}
@@ -45,7 +45,7 @@ export default function HeroSection() {
                         src={BlurImg1}
                         alt="Blurred Ball"
                         className="filter blur-sm"
-                        width={400}
+                        width={350}
                         height={0}
                         priority
                     />

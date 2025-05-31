@@ -21,10 +21,9 @@ const Header = () => {
   return (
     <header className="header sticky w-full z-[25] bg-[#CDA349]">
       <div className="container mx-auto px-4 overflow-hidden">
-        <div className="flex h-16 items-center justify-center py-[20px]">
-          <div className="hidden md:block">
-            <nav aria-label="Global">
-              <ul className="flex items-center md:gap-5 lg:gap-7 text-[15px] nav">
+        <div className="flex h-16 items-center justify-center  py-[20px]">
+            <nav aria-label="Global" className='hidden md:block lg:w-[80vw]  '>
+              <ul className="flex items-center justify-between  lg:px-12 text-[15px] nav">
                 {/* First 3 items */}
                 {navItems.slice(0, 3).map(({ label, href }) => {
                   const isActive = pathname === href;
@@ -79,7 +78,6 @@ const Header = () => {
                 })}
               </ul>
             </nav>
-          </div>
         </div>
       </div>
     </header>

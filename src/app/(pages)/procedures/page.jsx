@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import ImgProced1 from "@/public/assets/doctor5.jpg";
+import ImgProced1 from "@/public/assets/procedures/proced-img-main.svg";
 import ImgProced2 from "@/public/assets/botx1.png";
 // supporter company imgs
 import ImgSupporter1 from "@/public/assets/procedures/Precedures-icon1.svg";
@@ -64,27 +64,28 @@ export default function ProceduresSection() {
     return (
         <section className="proceduers-page px-3 py-12">
             <div className="container px-6 md:px-0 mx-auto">
-                <div className="content lg:grid grid-cols-2 gap-12.5 lg:w-[85%] mx-auto">
+                <div className="content flex justify-between flex-wrap bg-amber-400  lg:w-[100%] mx-auto">
                     {/* image section proced  */}
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
-                        className="flex flex-col lg:justify-end lg:items-end w-full h-full"
+                        className="  flex-1  flex flex-col lg:justify-end lg:items-center  h-full"
                     >
                         <Image
                             src={ImgProced1}
                             width={380}
                             height={340}
                             alt="Aesthetic procedure"
-                            className="rounded-3xl object-cover object-top w-[380px] h-[340px]"
+                            className="rounded-3xl object-cover object-top w-[400px] h-[400px]"
                             quality={100}
                         />
                     </motion.div>
 
                     {/* text section1 */}
                     <motion.div
+                    className="flex-1"
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}

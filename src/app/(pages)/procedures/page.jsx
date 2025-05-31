@@ -148,8 +148,14 @@ export default function ProceduresSection() {
                 </div>
 
 
+                
+
+            </div>
+
+            <div className="lg:container mx-auto">
+
                 {/* Before and After section for proced */}
-                <div className="before-imgs px-5 lg:px-0 pt-[100px] relative flex flex-col md:flex-row flex-wrap md:flex-nowrap justify-center items-center gap-4">
+                <div className="before-imgs px-5 lg:px-10 pt-[100px] relative flex flex-col md:flex-row flex-wrap md:flex-nowrap justify-center items-center gap-4">
                     {proceduresImages.map((pair, index) => (
                         <motion.div
                             key={index}
@@ -157,7 +163,7 @@ export default function ProceduresSection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
-                            className="relative flex md:flex-col items-center gap-4 cursor-pointer"
+                            className={`relative ${index==3?"sm:hidden lg:flex":""} ${index==4?"sm:hidden lg:flex":""}   flex md:flex-col items-center gap-4 cursor-pointer`}
                         >
                             {index === 0 && (
                                 <div className="text-gray-700 text-xl before-text top-[-41px] left-[16%] rotate-0 md:block absolute md:top-[60px] md:left-[-50px] transform md:rotate-[-452deg]">
@@ -168,9 +174,9 @@ export default function ProceduresSection() {
                             <Image
                                 src={pair.before}
                                 alt={`img-before`}
-                                width={120}
+                                width={140}
                                 height={200}
-                                className="img-before   sm:w-[180px] sm:h-[180px]   md:w-[160px] h-[160px] filter brightness-50 hover:brightness-100 focus:brightness-100 active:brightness-100 transition"
+                                className={`img-before    sm:w-[180px] sm:h-[180px]   md:w-[180px] h-[170px] filter brightness-50 hover:brightness-100 focus:brightness-100 active:brightness-100 transition`}
                             />
 
 
@@ -183,13 +189,16 @@ export default function ProceduresSection() {
                             <Image
                                 src={pair.after}
                                 alt={`img-after`}
-                                width={120}
+                                width={140}
                                 height={200}
-                                className=" img-after  sm:w-[180px] sm:h-[180px] md:w-[160px] h-[160px] filter brightness-50 hover:brightness-100 focus:brightness-100 active:brightness-100 transition"
+                                className={`img-after   sm:w-[180px] sm:h-[180px]   md:w-[180px] h-[170px] filter brightness-50 hover:brightness-100 focus:brightness-100 active:brightness-100 transition`}
                             />
                         </motion.div>
                     ))}
                 </div>
+            </div>
+
+            <div className="container px-6 md:px-0 mx-auto">
                 {/* text footer */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -201,8 +210,9 @@ export default function ProceduresSection() {
                     enhance patient experience, and boost retention. From smart bookings to loyalty rewards, this code is plug-and-play —
                     built with real clinic needs in mind. Invest once, and turn complexity into clarity for any aesthetic business. Scalable. Elegant. Proven.
                 </motion.div>
-
             </div>
+
+
         </section>
     );
 }

@@ -176,7 +176,7 @@ export default function ProceduresSection() {
                                 alt={`img-before`}
                                 width={140}
                                 height={200}
-                                className={`img-before ${index==0?"sm:!w-[140px] !brightness-100":""}     sm:w-[180px] sm:h-[180px]   md:w-[180px] h-[170px] filter brightness-50 hover:brightness-100 focus:brightness-100 active:brightness-100 transition`}
+                                className={`img-before ${index==0?"md:!w-[140px]   !brightness-100":""}     sm:w-[180px] sm:!h-[180px]   md:w-[180px] h-[170px] filter brightness-50 hover:brightness-100 focus:brightness-100 active:brightness-100 transition`}
                             />
 
 
@@ -191,7 +191,7 @@ export default function ProceduresSection() {
                                 alt={`img-after`}
                                 width={140}
                                 height={200}
-                                className={`img-after  ${index==0?"sm:!w-[140px] !brightness-100":""}   sm:w-[180px] sm:h-[180px]   md:w-[180px] h-[170px] filter brightness-50 hover:brightness-100 focus:brightness-100 active:brightness-100 transition`}
+                                className={`img-after  ${index==0?"md:!w-[140px]  !brightness-100":""}   sm:w-[180px] sm:!h-[180px]   md:w-[180px] h-[170px] filter brightness-50 hover:brightness-100 focus:brightness-100 active:brightness-100 transition`}
                             />
                         </motion.div>
                     ))}

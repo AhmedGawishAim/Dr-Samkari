@@ -120,7 +120,9 @@ const AboutPage = () => {
                           </h1>
                         )}
                         {section.subtitle && (
-                          <h2 className="text-[24px] italic">{section.subtitle}</h2>
+                          <h2 className="text-[24px] italic">
+                            {section.subtitle}
+                          </h2>
                         )}
                       </React.Fragment>
                     );
@@ -128,7 +130,7 @@ const AboutPage = () => {
 
                   if (section.type === "paragraph") {
                     return (
-                      <h2 key={index} className="!text-red-800 leading-[19px] pb-4 font-[200]">
+                      <h2 className="text-sm pb-5 leading-[20px]">
                         {section.text}
                       </h2>
                     );

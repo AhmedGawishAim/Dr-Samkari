@@ -128,9 +128,9 @@ const AboutPage = () => {
 
                   if (section.type === "paragraph") {
                     return (
-                      <p key={index} className=" leading-[19px] pb-4 font-[200]">
+                      <h2 key={index} className="!text-black leading-[19px] pb-4 font-[200]">
                         {section.text}
-                      </p>
+                      </h2>
                     );
                   }
 

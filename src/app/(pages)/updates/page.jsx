@@ -90,7 +90,7 @@ export default function OurApp() {
                           <Image
                             src={BlurImg1}
                             alt="Blurred Ball"
-                            className="filter blur-sm"
+                            className="filter blur-sm opacity-[0.5]"
                             width={280}
                             height={0}
                             priority
@@ -147,7 +147,7 @@ export default function OurApp() {
                     />
                     {index == 4 && (
                       <div className="balls">
-                        <div className="absolute w-[105%] h-[140%]  overflow-hidden  left-[-2%] bottom-[0px] z-[40]">
+                        <div className="absolute w-[105%] h-[120%]  overflow-hidden  left-[-2%] bottom-[0px] z-[40]">
                           <Image
                             src={OverLayImg}
                             alt="Blurred Ball"
@@ -221,6 +221,18 @@ export default function OurApp() {
             </div>
           </div>
         </div>
+          <div className="balls relative h-12 container w-[90%]">
+                        <div className="absolute  right-[-15%] bottom-[-2%] z-[40]">
+                          <Image
+                            src={BlurImg1}
+                            alt="Blurred Ball"
+                            className="filter blur-[3px] opacity-[0.5]"
+                            width={150}
+                            height={0}
+                            priority
+                          />
+                        </div>
+                      </div>
         <div className="footer-news text-center pt-20 text-gray-600">
           Unlock a ready-made, fully functional app designed by a top plastic
           surgeon to simplify clinic management, enhance patient experience, and
@@ -229,6 +241,7 @@ export default function OurApp() {
           turn complexity into clarity for any aesthetic business. Scalable.
           Elegant. Proven.
         </div>
+        
       </div>
     </div>
   );

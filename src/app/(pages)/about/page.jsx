@@ -8,6 +8,13 @@ import AboutPrize1 from "@/public/SVG/about-icon1.svg";
 import AboutPrize2 from "@/public/SVG/about-icon2.svg";
 import AboutPrize3 from "@/public/SVG/about-icon3.svg";
 
+
+// import Img3 from "@/public/SVG/about-doctor.png";
+// import BallImg1 from "@/public/assets/ball1-hero.png";
+// import AboutPrize1 from "@/public/SVG/about-icon1.svg";
+// import AboutPrize2 from "@/public/SVG/about-icon2.svg";
+// import AboutPrize3 from "@/public/SVG/about-icon3.svg";
+
 const aboutSectionsData = [
   {
     type: "heading",

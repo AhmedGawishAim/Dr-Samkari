@@ -77,7 +77,7 @@ export default function ProceduresSection() {
                     </div>
 
                     {/* text section1 */}
-                    <div className="flex-1">
+                    <div className="flex-1 ml-[-20px]">
                         <h2 className="text-4xl font-bold text-gray-900 mb-4 pt-[30px] lg:p-0">
                             Procedures
                         </h2>

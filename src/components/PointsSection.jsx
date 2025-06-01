@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import ImgIphnoe from "@/public/assets/iphone4.png";
 import ImgDimond from "@/public/assets/Diamond.gif";
+import ImgDimond2 from "@/public/assets/diamondd.gif";
 
 export default function PointsSection() {
   return (
@@ -67,7 +68,7 @@ export default function PointsSection() {
               className="absolute left-0 !top-[-230px] w-full flex justify-center z-50"
             >
               <Image
-                src={ImgDimond}
+                src={ImgDimond2}
                 alt="Diamond"
                 width={550}
                 height={500}

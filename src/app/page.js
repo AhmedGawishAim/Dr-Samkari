@@ -6,7 +6,6 @@ import TrackBookSection from "../components/TrackProgressSection";
 import NotifiedSection from "../components/NotifiedSection";
 import PointsSection from "../components/PointsSection";
 import LatestNewsSection from "../components/LatestNewsSection";
-import Test from "../components/Test"
 import ImgLoading from "@/public/assets/img-loading.png";
 import Image from "next/image";
 

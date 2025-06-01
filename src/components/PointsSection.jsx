@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import ImgIphnoe from "@/public/assets/iphone4.png";
-import ImgDimond from "@/public/assets/Diamond.gif";
+// import ImgDimond from "@/public/assets/Diamond.gif";
 import ImgDimond2 from "@/public/assets/diamondd.gif";
 
 export default function PointsSection() {

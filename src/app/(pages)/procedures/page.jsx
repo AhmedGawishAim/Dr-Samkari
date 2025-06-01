@@ -1,9 +1,7 @@
-"use client";
-
+'use client';
 
 import { useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import ImgProced1 from "@/public/assets/procedures/proced-img-main.svg";
 import ImgProced2 from "@/public/assets/botx1.png";
 // supporter company imgs
@@ -65,33 +63,21 @@ export default function ProceduresSection() {
     return (
         <section className="proceduers-page px-3 py-12">
             <div className="container px-6 md:px-0 mx-auto">
-                <div className="content flex justify-between flex-wrap bg-amber-400  lg:w-[100%] mx-auto">
+                <div className="content grid gap-6 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 lg:w-[80%] mx-auto">
                     {/* image section proced  */}
-                    <motion.div
-                        initial={{ opacity: 0, x: -50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
-                        className="  flex-1  flex flex-col lg:justify-end lg:items-center  h-full"
-                    >
+                    <div className="flex-1 flex justify-center items-center flex-col h-full">
                         <Image
                             src={ImgProced1}
-                            width={380}
-                            height={340}
+                            width={80}
+                            height={240}
                             alt="Aesthetic procedure"
-                            className="rounded-3xl object-cover object-top w-[400px] h-[400px]"
+                            className="rounded-3xl object-cover object-right  w-[430px] h-[310px]"
                             quality={100}
                         />
-                    </motion.div>
+                    </div>
 
                     {/* text section1 */}
-                    <motion.div
-                    className="flex-1"
-                        initial={{ opacity: 0, y: 40 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                    >
+                    <div className="flex-1">
                         <h2 className="text-4xl font-bold text-gray-900 mb-4 pt-[30px] lg:p-0">
                             Procedures
                         </h2>
@@ -103,9 +89,7 @@ export default function ProceduresSection() {
                             cosmetic surgeon based in Amman, renowned for his expertise in
                             non-surgical facial rejuvenation and advanced aesthetic
                             techniques.{" "}
-                            <a href="#" className="text-blue-600 underline">
-                                (CRISALIX)
-                            </a>
+                            CRISALIX
                         </p>
                         <h3 className="text-xl font-semibold text-gray-900 mb-0">
                             Results
@@ -119,55 +103,43 @@ export default function ProceduresSection() {
                             doctors performing free surgeries for children with congenital
                             malformations, inspired his passion for aesthetic medicine.
                         </p>
-                    </motion.div>
+                    </div>
+
+
+
+
                 </div>
 
                 {/* supporters Logo section */}
-                <div className="mt-12 lg:w-[85%] mx-auto">
-                    <div className="supporter lg:w-[90%] mx-auto flex justify-evenly">
-                        <div className="flex flex-wrap gap-y-12 gap-x-6 md:items-center justify-center">
-                            {supporterImages.map((img, index) => (
-                                <motion.div
-                                    key={index}
-                                    className="box-im w-[100px] sm:w-[140px] md:w-[160px]"
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.4, delay: index * 0.05 }}
-                                >
-                                    <Image
-                                        src={img}
-                                        width={140}
-                                        height={50}
-                                        alt={`Supporter ${index + 1}`}
-                                        className={`w-[100px] sm:w-[140px] ${index} ${index == 5 ? "!h-[65px]" : ""}   h-[40px] cursor-pointer`}
-                                        quality={100}
-                                    />
-                                </motion.div>
-                            ))}
-                        </div>
+                <div className="mt-12 lg:w-[80%] mx-auto">
+                    <div className="supporter flex flex-wrap gap-x-6 gap-y-12 justify-center items-center">
+                        {supporterImages.map((img, index) => (
+                            <div
+                                key={index}
+                                className={`box-im w-[150px] flex justify-end sm:w-[180px] md:w-[185px]`}
+                            >
+                                <Image
+                                    src={img}
+                                    width={140}
+                                    height={50}
+                                    alt={`Supporter ${index + 1}`}
+                                    className={`w-[100px] sm:w-[140px] ${index === 5 ? "!h-[65px]" : ""} h-[40px] cursor-pointer object-contain`}
+                                    quality={100}
+                                />
+                            </div>
+                        ))}
                     </div>
                 </div>
 
+                <div className="container lg:w-[90%] px-6 mx-auto">
+                    {/* text footer */}
+                    <div className="text-footer text-gray-700 pt-[80px] text-center">
+                        Unlock a ready-made, fully functional app designed by a top plastic surgeon to simplify clinic management,
+                        enhance patient experience, and boost retention. From smart bookings to loyalty rewards, this code is plug-and-play —
+                        built with real clinic needs in mind. Invest once, and turn complexity into clarity for any aesthetic business. Scalable. Elegant. Proven.
+                    </div>
+                </div>
 
-                
-
-            </div>
-
-         
-
-            <div className="container px-6 md:px-0 mx-auto">
-                {/* text footer */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
-                    className="text-footer text-gray-700 pt-[80px] text-center">
-                    Unlock a ready-made, fully functional app designed by a top plastic surgeon to simplify clinic management,
-                    enhance patient experience, and boost retention. From smart bookings to loyalty rewards, this code is plug-and-play —
-                    built with real clinic needs in mind. Invest once, and turn complexity into clarity for any aesthetic business. Scalable. Elegant. Proven.
-                </motion.div>
             </div>
 
 

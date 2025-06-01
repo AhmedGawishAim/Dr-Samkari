@@ -91,17 +91,17 @@ export default function OurApp() {
                             src={BlurImg1}
                             alt="Blurred Ball"
                             className="filter blur-sm opacity-[0.5]"
-                            width={280}
+                            width={250}
                             height={0}
                             priority
                           />
                         </div>
-                        <div className="absolute  right-[-15%] top-[-100px] z-[40]">
+                        <div className="absolute  right-[-20%] top-[-60px] z-[40]">
                           <Image
                             src={BlurImg1}
                             alt="Blurred Ball"
                             className="filter blur-[3px]"
-                            width={100}
+                            width={80}
                             height={0}
                             priority
                           />
@@ -111,12 +111,12 @@ export default function OurApp() {
 
                     {index == 2 && (
                       <div className="balls">
-                        <div className="absolute  right-[-40%] top-[-100px] z-[40]">
+                        <div className="absolute  right-[-40%] bottom-[-10px] z-[40]">
                           <Image
                             src={BlurImg1}
                             alt="Blurred Ball"
-                            className="filter w-[250px] sm:w-[350px] blur-[3px]"
-                            width={350}
+                            className="filter w-[250px] sm:w-[270px] blur-[3px]"
+                            width={30}
                             height={0}
                             priority
                           />
@@ -130,7 +130,7 @@ export default function OurApp() {
                             src={BlurImg1}
                             alt="Blurred Ball"
                             className="filter blur-[8px]"
-                            width={150}
+                            width={120}
                             height={0}
                             priority
                           />
@@ -151,18 +151,22 @@ export default function OurApp() {
                           <Image
                             src={OverLayImg}
                             alt="Blurred Ball"
-                            className="filter blur-[8px] w-full"
+                            className="filter blur-[8px] w-full mt-[-30px]"
                             width={200}
                             height={0}
                             priority
                           />
                         </div>
+                        <div className="absolute flex flex-col text-white left-[2%] top-[10px] z-[50]">
+                          <span className="text-[#f7e8e8] text-[25px] text-left">Dr.Zaid Samkari</span>
+                         <span className="text-[#f7e8e8] text-[17px] text-left">2 weeks ago</span>
+
+                        </div>
                       </div>
                     )}
                   </div>
 
-                  <div
-                    className={` ${index == 4 ? "hidden" : ""} qusetion-bottom`}
+                  <div className={` qusetion-bottom ${index == 4 ? "hidden" : ""}`}
                   >
                     <button
                       onClick={() => toggle(index)}
@@ -173,7 +177,7 @@ export default function OurApp() {
                       <span className="font-medium">{faq.question}</span>
                       <div className="arrow-icon">
                         <IoIosArrowDown
-                          className={` cursor-pointer w-5 h-5 transform transition-transform duration-300 ${
+                          className={` cursor-pointer !font-extrabold text-[35px] transform transition-transform duration-300 ${
                             openIndex === index ? "rotate-180" : ""
                           }`}
                         />
@@ -190,6 +194,7 @@ export default function OurApp() {
                       </p>
                     </div>
                   </div>
+
                 </div>
               ))}
               <div className="social flex justify-center gap-13 pt-[20px]">

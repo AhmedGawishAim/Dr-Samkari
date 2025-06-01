@@ -84,7 +84,7 @@ export default function ProceduresSection() {
                         <h3 className="text-xl font-semibold italic text-gray-900 mb-0">
                             How it Works?
                         </h3>
-                        <p className="text-gray-800 mb-6 leading-[20px]">
+                        <p className="text-gray-800 mb-6 leading-[20px] lg:w-[90%]">
                             Dr. Zaid Samkari is a prominent Jordanian aesthetic doctor and
                             cosmetic surgeon based in Amman, renowned for his expertise in
                             non-surgical facial rejuvenation and advanced aesthetic

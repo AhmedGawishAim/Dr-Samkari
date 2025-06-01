@@ -1,9 +1,16 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: false,
   images: {
-    disableStaticImages: true,
-  },
-};
-
+    formats: ['image/webp'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+        port: '',
+        pathname: '**',
+      },
+    ],
+  }
+}
 
 export default nextConfig;
